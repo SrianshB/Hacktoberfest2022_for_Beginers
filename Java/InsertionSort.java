@@ -1,11 +1,12 @@
 /*Tharindu Sooriyaarachchi -   https://github.com/TharinduDilshan  */
 public class InsertionSort
 {
-    void insert(int a[])
+    static void insert(int a[])//using static for efficient memory management
     {
         int i, j, temp;
         int n = a.length;
-        for (i = 1; i < n; i++) {
+        for (i = 1; i < n; i++) 
+        {
             temp = a[i];
             j = i - 1;
 
@@ -17,7 +18,7 @@ public class InsertionSort
             a[j+1] = temp;
         }
     }
-    void printArr(int a[])
+    static void printArr(int a[])
     {
         int i;
         int n = a.length;
@@ -25,7 +26,8 @@ public class InsertionSort
             System.out.print(a[i] + " ");
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
         int a[] = { 92, 50, 5, 20, 11, 22 };
         InsertionSort i1 = new InsertionSort();
         System.out.println("\nBefore sorting array elements are - ");
